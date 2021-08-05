@@ -20,14 +20,14 @@
         
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+		
 <style>
             body {
                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
                 font-size: 14px;
                 line-height: 1.6;
             }
-        </style>
-        <style>
+			#mycon { max-width:800px; padding:10px; margin:10px auto;}
 .task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
 </style>
         
@@ -35,6 +35,7 @@
         
     </head>
     <body class="vscode-body vscode-light">
+		<div id="mycon">
         <h1 id="airbnb-vs-hotel---what-is-the-better-lodging-option">Airbnb vs Hotel - what is the better lodging option?</h1>
 <p>We chose to compare and contrast Airbnb versus hotel lodging choices in the eight major cities listed below. Airbnb listing data was captured for each city on the date indicated:</p>
 <ul>
@@ -58,9 +59,9 @@
 </ul>
 <h2 id="what-is-the-better-lodging-option-airbnb-or-hotel">What is the better lodging option, Airbnb or hotel?</h2>
 <p>We compared average price and guest rating for each type of lodging in each city, based on non-shared, double-occupancy accommodations. In each city except Beijing, the average Airbnb price was lower than the average hotel price. In Beijing, however, the average Airbnb price was significantly higher, as seen below:</p>
-<p><img src="file:////Users/maryphillipuk/Desktop/dataScience/dataBootcamp/dataviz-project1/hotel-tripadvisor/saveImages/AverageHotelandAirbnb.png" alt="AverageHotelandAirbnb.png"></p>
+<p><img src="./hotel-tripadvisor/saveImages/AverageHotelandAirbnb.png" alt="AverageHotelandAirbnb.png"></p>
 <p>We also compared average ratings for these lodgings, and found Airbnb ratings to be higher than hotel ratings in each city, as seen below:</p>
-<p><img src="file:////Users/maryphillipuk/Desktop/dataScience/dataBootcamp/dataviz-project1/hotel-tripadvisor/saveImages/HotelAirbnbRating.png" alt="HotelAirbnbRating.png"></p>
+<p><img src="./hotel-tripadvisor/saveImages/HotelAirbnbRating.png" alt="HotelAirbnbRating.png"></p>
 <h2 id="analysis">Analysis</h2>
 <p>Judging from price and rating scores, Airbnb appears to be the better choice for lodging in most cities. In all eight, Airbnb average ratings are higher than ratings for hotels, but we view the ratings comparison warily for two reasons:</p>
 <ul>
@@ -81,36 +82,36 @@ Since all city Airbnb ratings are high and close together, we look to the hotel 
 <li><strong>Sydney: 0.12162849337212868</strong></li>
 </ul>
 <p>Lodging price distributions for each city, excluding outliers, are shown below with mean price lines in red for Airbnb, and black for hotels.</p>
-<p><img src="file:////Users/maryphillipuk/Desktop/dataScience/dataBootcamp/dataviz-project1/hotel-tripadvisor/saveImages/priceHistogramComparisons.png" alt="priceHistogramComparisons.png"></p>
+<p><img src="./hotel-tripadvisor/saveImages/priceHistogramComparisons.png" alt="priceHistogramComparisons.png"></p>
 <hr>
 <h2 id="how-do-lodging-options-vary-city-to-city">How do lodging options vary city to city?</h2>
 <p>In addition to price and rating differences discussed above, we found an unexpected Airbnb listing density difference between cities. The square areas of these cities vary widely, so we checked the raw listing count (before filtering) for each city against its geographical area, and found the density in Paris to be extremely high as shown in the chart below.</p>
-<p><img src="file:////Users/maryphillipuk/Desktop/dataScience/dataBootcamp/dataviz-project1/airbnb/saveImages/AirbnbListingDensity.png" alt="AirbnbListingDensity.png"></p>
+<p><img src="./airbnb/saveImages/AirbnbListingDensity.png" alt="AirbnbListingDensity.png"></p>
 <h2 id="analysis-1">Analysis</h2>
 <p>As mentioned above, lodging prices vary significantly from city to city, as shown by one-way a ANOVA comparing Airbnb prices for all eight cities (statistic=1975.0873644553315, pvalue=0.0), and a one-way ANOVA comparing hotel prices for all eight cities (statistic=68.52842096834225, pvalue=1.0113350127400278e-93). We were unable to obtain exhaustive hotel listing information, but considering Airbnb data, there appears to be considerable difference in choice based on the density of available listings.</p>
 <hr>
 <h2 id="how-does-lodging-vary-within-a-city-neighborhood-to-neighborhood">How does lodging vary within a city, neighborhood to neighborhood?</h2>
 <p>Using the hotel geography we had, plotting heat maps showed hotels tending to cluster centrally, as shown in the New York City hotel heat map below.</p>
-<p><img src="file:////Users/maryphillipuk/Desktop/dataScience/dataBootcamp/dataviz-project1/Hotels_Analysis/Images/NY_price_heatmap.png" alt="NY_price_heatmap.png"></p>
+<p><img src="./Hotels_Analysis/Images/NY_price_heatmap.png" alt="NY_price_heatmap.png"></p>
 <p>By comparison, Airbnb clusters appear in more varied locations, as shown in the Airbnb heat map of New York below.</p>
-<p><img src="file:////Users/maryphillipuk/Desktop/dataScience/dataBootcamp/dataviz-project1/airbnb/saveImages/NewYorkPriceHeatmap.png" alt="NewYorkPriceHeatmap.png"></p>
+<p><img src="./airbnb/saveImages/NewYorkPriceHeatmap.png" alt="NewYorkPriceHeatmap.png"></p>
 <h2 id="analysis-2">Analysis</h2>
 <p>Though our data set for hotels was limited, the New York City heatmap indicates hotel accommodations are concentrated mainly in midtown. By contrast, the New York City heatmap for Airbnb listings shows a more continuous spread throughout the boroughs. Both heatmaps are weighted for price, and it is interesting to see that while central (Manhattan) locations show  higher price, hip neighborhoods such as Williamsburg and Greenpoint show strong with price concentrations that suggest desirability, though they are not as central. High concentrations in outlying areas may indicate these neighborhoods have arrived as destinations in and of themselves.</p>
 <p>In general, we found that many cities show the highest prices for lodging in the most central neighborhoods, with prices decreasing toward the outer reaches. This can be seen in the Madrid chloropleth showing average neighborhood Airbnb prices below.</p>
-<p><img src="file:////Users/maryphillipuk/Desktop/dataScience/dataBootcamp/dataviz-project1/airbnb/saveImages/Madrid_Chloropleth2.png" alt="Madrid_Chloropleth2.png"></p>
+<p><img src="./airbnb/saveImages/Madrid_Chloropleth2.png" alt="Madrid_Chloropleth2.png"></p>
 <hr>
 <h2 id="where-do-people-choose-to-stay---what-factors-affect-this">Where do people choose to stay - what factors affect this?</h2>
 <p>We used number of reviews as a marker to indicate the most popular lodging choices in both hotel and Airbnb datasets, and created scatter plots to look for patterns. Plotting number of reviews against price and rating, we observed a &quot;middle value&quot; (neither best nor worst price and rating) where there were the most reviews. A plot of hotel data is shown below.</p>
-<p><img src="file:////Users/maryphillipuk/Desktop/dataScience/dataBootcamp/dataviz-project1/hotel-tripadvisor/saveImages/HotelRatingsScatter.png" alt="HotelRatingsScatter.png"></p>
+<p><img src="./hotel-tripadvisor/saveImages/HotelRatingsScatter.png" alt="HotelRatingsScatter.png"></p>
 <p>A comparable plot using Airbnb data for New York (blue) and Paris (pink):</p>
-<p><img src="file:////Users/maryphillipuk/Desktop/dataScience/dataBootcamp/dataviz-project1/airbnb/saveImages/NumberofRatings.png" alt="NumberofRatings.png"></p>
+<p><img src="./airbnb/saveImages/NumberofRatings.png" alt="NumberofRatings.png"></p>
 <h2 id="analysis-3">Analysis</h2>
 <p>The scatter plots indicate a concentration at of low-moderate price and high rating where the most reviews are logged. The AirBnBnotebook file in the airbnb directory contains a scatter plot indicating a specific listing description word count range that coincides with the most reviews. Lodgers appear most attracted to moderately-priced accommodations with high ratings and ample description about the property.</p>
 <hr>
 <h2 id="finally-where-should-you-stay">Finally, where should you stay?</h2>
 <p>Using lower prices, higher ratings, and wider neighborhood location choice as reasons, this analysis would recommend Airbnb lodgings over hotel accommodations for most of the cities. However it is interesting to note that the Airbnb data used here was provided by a website that is essentially against the continued proliferation of Airbnb rentals in cities worldwide.  The site owner provides the data hoping it will be used in conjunction with other information to show how the growth of Airbnb has had detrimental effects on cities.</p>
 <p>We did not have the opportunity to obtain other kinds of data to measure the qualitative impact of Airbnb on these destinations, but it is difficult to ignore consistent items in the news that place Airbnb in a negative light. As a final gesture to acknowledge these associations, we used the Google Custom Search API in conjunction with 12 major news websites to create a word cloud based on news headlines returned from the search term &quot;airbnb&quot;. This result is below.</p>
-<p><img src="file:////Users/maryphillipuk/Desktop/dataScience/dataBootcamp/dataviz-project1/airbnb/saveImages/newsTitleCloud.png" alt="newsTitleCloud.png"></p>
-
+<p><img src="./airbnb/saveImages/newsTitleCloud.png" alt="newsTitleCloud.png"></p>
+	</div>
     </body>
     </html>
